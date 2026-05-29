@@ -32,10 +32,12 @@
           Voltar
         </a>
         <h1>Compras da semana</h1>
-        <div class="inputItem">
-          <input type="text" placeholder="Adicione um novo item" />
-          <button>Adicionar item</button>
-        </div>
+        <form class="inputItem">
+          <fieldset>
+            <input type="text" placeholder="Adicione um novo item" required />
+            <button class="addItem" type="submit">Adicionar item</button>
+          </fieldset>
+        </form>
         <ul class="listItems">
           <li class="item">
             <input type="checkbox" name="itemCheck" id="itemCheck" />
@@ -47,6 +49,7 @@
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="trash"
               >
                 <path
                   d="M13 3.66669L12.5869 10.3501C12.4813 12.0576 12.4285 12.9114 12.0005 13.5253C11.7889 13.8288 11.5165 14.0849 11.2005 14.2774C10.5614 14.6667 9.706 14.6667 7.99513 14.6667C6.28208 14.6667 5.42553 14.6667 4.78603 14.2766C4.46987 14.0838 4.19733 13.8272 3.98579 13.5232C3.55792 12.9084 3.5063 12.0534 3.40307 10.3435L3 3.66669"
@@ -63,7 +66,7 @@
           </li>
         </ul>
       </div>
-      <div class="alert active">
+      <div class="alert">
         <svg
           width="20"
           height="20"
@@ -107,5 +110,7 @@
         </span>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
