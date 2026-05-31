@@ -10,11 +10,10 @@ function createNewItem(value) {
 
   const itemName = document.createElement("span");
   itemName.textContent = value;
-  newItem.classList.add("itemName");
 
   const check = document.createElement("input");
   check.type = "checkbox";
-  check.id = "itemCheck";
+  check.classList = "itemCheck";
 
   const spanTrash = document.createElement("span");
   spanTrash.classList.add("exclude");
@@ -43,9 +42,11 @@ addItem.addEventListener("click", (event) => {
   }
 });
 
-addEventListener("click", (event) => {
-  const itemClass = event.target.classList.value;
-  if (itemClass === "trash" || itemClass === "exclude") {
+listItems.addEventListener("click", (event) => {
+  if (
+    event.target.classList.contains("trash") ||
+    event.target.classList.contains("exclude")
+  ) {
     const trashCan = event.target;
     const parentItem = trashCan.closest(".item");
     parentItem.remove();

@@ -145,7 +145,7 @@ h1 {
   border-radius: 0.75rem;
 }
 
-#itemCheck {
+.itemCheck {
   appearance: none;
 
   width: 1rem;
@@ -157,11 +157,11 @@ h1 {
   accent-color: var(--always-white);
 }
 
-#itemCheck:hover {
+.itemCheck:hover {
   border: 2px solid var(--border-hover);
 }
 
-#itemCheck:checked {
+.itemCheck:checked {
   appearance: auto;
   accent-color: var(--color-brand);
   border: none;
